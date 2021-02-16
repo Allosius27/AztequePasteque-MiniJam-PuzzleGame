@@ -40,6 +40,7 @@ public class GameCore : MonoBehaviour
 
         currentLevel = levels[s_current_level];
         currentLevel.gameObject.SetActive(true);
+        textCurrentLevel.text = currentLevel.name;
     }
 
     // Update is called once per frame
