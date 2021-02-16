@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8" ?> 
+
+<languages>
+
+  <language>
+    <Name>Français</Name>
+    <bonjour>Bonjour</bonjour>
+    <aurevoir>Au revoir</aurevoir>
+    <options>Options</options>
+    <pleinecran>Plein ecran</pleinecran>
+    <qualitegraphique>Qualité graphique</qualitegraphique>
+    <volume>Volume</volume>
+    <commandes>Commandes</commandes>
+    <nouvellepartie>Nouvelle partie</nouvellepartie>
+    <continuer>Continuer</continuer>
+    <quitter>Quitter</quitter>
+    <retour>Retour</retour>
+
+  </language>
+  
+  <language>
+    <Name>English</Name>
+    <bonjour>Hello</bonjour>
+    <aurevoir>Bye</aurevoir>
+    <options>Settings</options>
+    <pleinecran>Full screen</pleinecran>
+    <qualitegraphique>Graphics quality</qualitegraphique>
+    <volume>Volume</volume>
+    <commandes>Controls</commandes>
+    <nouvellepartie>New game</nouvellepartie>
+    <continuer>Continue</continuer>
+    <quitter>Exit</quitter>
+    <retour>Return</retour>
+  </language>
+  
+  <language>
+    <Name>Español</Name>
+    <bonjour>Hola</bonjour>
+    <aurevoir>Adiós</aurevoir>
+    <options>Opciones</options>
+    <pleinecran>Pantalla completa</pleinecran>
+    <qualitegraphique>Calidad gráfica</qualitegraphique>
+    <volume>Volumen</volume>
+    <commandes>Controles</commandes>
+    <nouvellepartie>Nueva parte</nouvellepartie>
+    <continuer>Continuar</continuer>
+    <quitter>Salir</quitter>
+    <retour>Retorno</retour>
+  </language>
+
+</languages>
