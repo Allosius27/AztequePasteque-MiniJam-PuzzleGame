@@ -13986,6 +13986,11 @@ PrefabInstance:
       propertyPath: launcher
       value: 
       objectReference: {fileID: 254449214}
+    - target: {fileID: 1219083324111204745, guid: 39b479409389dbc4f847f325e658b865,
+        type: 3}
+      propertyPath: dynamics
+      value: 
+      objectReference: {fileID: 743978471}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 39b479409389dbc4f847f325e658b865, type: 3}
 --- !u!1001 &1878586967758142084
@@ -14410,6 +14415,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Main Camera
+      objectReference: {fileID: 0}
+    - target: {fileID: 5232706814581577502, guid: cd5ca68d7cb6fe6418bfc00b115564b2,
+        type: 3}
+      propertyPath: orthographic
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cd5ca68d7cb6fe6418bfc00b115564b2, type: 3}

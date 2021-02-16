@@ -20,6 +20,9 @@ public class GameCore : MonoBehaviour
     public static int s_current_level;
 
     public Launcher launcher;
+    public PointsNumber pointsNumbers;
+    //public Canvas uiCanvas;
+    public GameObject dynamics;
 
     public int currentLevelIndex = 0;
     
@@ -59,6 +62,13 @@ public class GameCore : MonoBehaviour
     {
         this.score += amount;
         textScore.text = score.ToString();
+    }
+
+    public void DisplayPointsScore(Transform target, int amount)
+    {
+        PointsNumber display = Instantiate(pointsNumbers, target.transform.position, target.transform.rotation);
+        display.SetPoints(amount);
+        display.gameObject.transform.SetParent(dynamics.transform);
     }
 
     public void NextLevel()

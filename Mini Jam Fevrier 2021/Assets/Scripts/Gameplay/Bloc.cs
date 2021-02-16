@@ -42,6 +42,7 @@ public class Bloc : MonoBehaviour
             hit.rigidbody.AddForce(collisionDir * forceMult);
             graphics.color = new Color(r, g, b, a);
             isTouched = true;
+            GameCore.instance.DisplayPointsScore(this.transform, scoreValue);
             GameCore.instance.scoreToAdd += scoreValue;
         }
     }
