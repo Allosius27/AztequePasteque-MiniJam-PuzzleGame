@@ -4,6 +4,10 @@ using UnityEngine;
 
 public class DeathZone : MonoBehaviour
 {
+    public bool transition = false;
+
+    public int modifierBall = -1;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -13,21 +17,39 @@ public class DeathZone : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
-    }
-
-    void CheckBlocsToDestroy()
-    {
-        for(int i = 0; i < GameCore.instance.currentLevel.listBlocs.Count; i++)
+        for (int i = 0; i < GameCore.instance.currentLevel.listBlocs.Count; i++)
         {
-            if(GameCore.instance.currentLevel.listBlocs[i].isTouched)
+            if (GameCore.instance.currentLevel.listBlocs[i] == null)
             {
-                Destroy(GameCore.instance.currentLevel.listBlocs[i].gameObject);
-                if(GameCore.instance.currentLevel.listTargetBlocs.Contains(GameCore.instance.currentLevel.listBlocs[i]))
+                if (GameCore.instance.currentLevel.listTargetBlocs.Contains(GameCore.instance.currentLevel.listBlocs[i]))
                 {
                     GameCore.instance.currentLevel.listTargetBlocs.Remove(GameCore.instance.currentLevel.listBlocs[i]);
                 }
+
                 GameCore.instance.currentLevel.listBlocs.Remove(GameCore.instance.currentLevel.listBlocs[i]);
+            }
+        }
+
+        if (GameCore.instance.currentLevel.listTargetBlocs.Count == 0 && GameCore.s_current_level < GameCore.instance.levels.Length - 1 && transition == true)
+        {
+            GameCore.instance.scoreObtainedActive = true;
+            transition = false;
+        }
+    }
+
+    public void CheckBlocsToDestroy()
+    {
+        for(int i = 0; i < GameCore.instance.currentLevel.listBlocs.Count; i++)
+        {
+            if(GameCore.instance.currentLevel.listBlocs[i].isTouched && GameCore.instance.currentLevel.listBlocs[i] != null)
+            {
+                Debug.Log(GameCore.instance.currentLevel.listBlocs[i].gameObject);
+                Destroy(GameCore.instance.currentLevel.listBlocs[i].gameObject);
+                /*if(GameCore.instance.currentLevel.listTargetBlocs.Contains(GameCore.instance.currentLevel.listBlocs[i]))
+                {
+                    GameCore.instance.currentLevel.listTargetBlocs.Remove(GameCore.instance.currentLevel.listBlocs[i]);
+                }
+                GameCore.instance.currentLevel.listBlocs.Remove(GameCore.instance.currentLevel.listBlocs[i]);*/
             }
         }
     }
@@ -43,9 +65,9 @@ public class DeathZone : MonoBehaviour
 
         if (typeCollision.Type == Entity.TypeObject.Player)
         {
-            Debug.Log(this.name + "Collides");
+            //Debug.Log(this.name + "Collides");
 
-            GameCore.instance.SetStockBalls(-1);
+            GameCore.instance.SetStockBalls(modifierBall);
             
 
             CheckBlocsToDestroy();
@@ -55,9 +77,11 @@ public class DeathZone : MonoBehaviour
             GameCore.instance.scoreToAdd = 0;
             //GameCore.instance.SetScore(GameCore.instance.scoreToAdd);
 
-            if (GameCore.instance.currentLevel.listTargetBlocs.Count == 0 && GameCore.s_current_level < GameCore.instance.levels.Length-1)
+            transition = true;
+
+            if (GameCore.instance.currentLevel.listTargetBlocs.Count == 0 && GameCore.s_current_level < GameCore.instance.levels.Length-1 && transition == true)
             {
-                Debug.Log("End Level");
+                //Debug.Log("End Level");
                 GameCore.instance.scoreObtainedActive = true;
                 //GameCore.instance.ScoreObtainedAtLevel();
                 //GameCore.instance.NextLevel();

@@ -191,7 +191,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: quitter
+  m_Text: Exit
 --- !u!222 &823152
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -682,7 +682,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Jouer
+  m_Text: Play
 --- !u!222 &441243874
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -775,7 +775,7 @@ Transform:
   - {fileID: 439444264}
   - {fileID: 227061609}
   m_Father: {fileID: 647591319}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &605515777
 GameObject:
@@ -888,7 +888,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a10561e65cc110498806f99a3135448, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  newGameScene: SandboxScene
+  newGameScene: Sandbox
   loadingScreen: {fileID: 439444263}
   slider: {fileID: 227061610}
   progressText: {fileID: 367948881}
@@ -974,8 +974,8 @@ RectTransform:
   - {fileID: 1618918178}
   - {fileID: 158152078}
   - {fileID: 1469358654}
-  - {fileID: 8721165428669001770}
   - {fileID: 585281446}
+  - {fileID: 8721165428669001770}
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1607,7 +1607,7 @@ PrefabInstance:
     - target: {fileID: 412967186836843610, guid: ab5c396340e669242b114f569e847f8b,
         type: 3}
       propertyPath: m_RootOrder
-      value: 6
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 412967186836843610, guid: ab5c396340e669242b114f569e847f8b,
         type: 3}

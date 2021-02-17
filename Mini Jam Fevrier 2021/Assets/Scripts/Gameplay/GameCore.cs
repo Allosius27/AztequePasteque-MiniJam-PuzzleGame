@@ -26,6 +26,10 @@ public class GameCore : MonoBehaviour
 
     public Launcher launcher;
     public PointsNumber pointsNumbers;
+
+    public TextEffect textEffectBallSaver;
+    public TextEffect textEffectDoublePoints;
+
     //public Canvas uiCanvas;
     public GameObject dynamics;
 
@@ -38,6 +42,9 @@ public class GameCore : MonoBehaviour
     int actualTotalScore = 0;
 
     public int currentLevelIndex = 0;
+    public string mainMenuScene;
+
+    public GameObject gameOverPanel;
     
 
     public static GameCore instance;
@@ -69,6 +76,11 @@ public class GameCore : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(stockBalls == 0 && currentLevel.listTargetBlocs.Count > 0)
+        {
+            gameOverPanel.SetActive(true);
+        }
+
         if(scoreObtainedActive)
         {
             ScoreObtainedAtLevel();
@@ -136,6 +148,15 @@ public class GameCore : MonoBehaviour
         display.gameObject.transform.SetParent(dynamics.transform);
     }
 
+
+    public void DisplayTextEffectBallSaver(Transform target, TextEffect textEffect)
+    {
+        TextEffect display = Instantiate(textEffect, target.transform.position, target.transform.rotation);
+        display.SetPoints();
+        display.gameObject.transform.SetParent(dynamics.transform);
+    }
+
+
     public void ScoreObtainedAtLevel()
     {
         scoreObtained.scoreObtainedText.text = scoreObtained.scoreobtainedAmount.ToString();
@@ -182,5 +203,21 @@ public class GameCore : MonoBehaviour
         s_current_level++;
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         return;
+    }
+
+    public void Retry()
+    {
+        s_current_level = 0;
+        totalScore = 0;
+
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
+
+    public void ReturnMainMenu()
+    {
+        s_current_level = 0;
+        totalScore = 0;
+
+        SceneManager.LoadScene(mainMenuScene);
     }
 }

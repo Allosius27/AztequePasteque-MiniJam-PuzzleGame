@@ -59,6 +59,10 @@ MonoBehaviour:
   launcher: {fileID: 0}
   pointsNumbers: {fileID: 4669908962210019537, guid: 2a8fd6f6c174397499af3aedb533787f,
     type: 3}
+  textEffectBallSaver: {fileID: 6726712434055996706, guid: b9308397bae98ab4fa95586dc45fa767,
+    type: 3}
+  textEffectDoublePoints: {fileID: 2458237969860393240, guid: 913eb41e2457afe419b3e23bac1e554c,
+    type: 3}
   dynamics: {fileID: 0}
   scoreObtained: {fileID: 0}
   scoreObtainedActive: 0
@@ -66,3 +70,5 @@ MonoBehaviour:
   boardScore: {fileID: 0}
   setTotalScoreActive: 0
   currentLevelIndex: 0
+  mainMenuScene: TitleScreen
+  gameOverPanel: {fileID: 0}

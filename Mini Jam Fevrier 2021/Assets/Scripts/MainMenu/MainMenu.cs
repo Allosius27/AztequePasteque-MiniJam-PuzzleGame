@@ -14,7 +14,7 @@ public class MainMenu : MonoBehaviour
     public static MainMenu instance;
 
     //public GameObject continueButton;
-    public static bool continueActive;
+    //public static bool continueActive;
     public Button buttonContinue;
 
     public string loadGameScene;
@@ -34,27 +34,27 @@ public class MainMenu : MonoBehaviour
 
         Cursor.SetCursor(null, hotSpot, cursorMode);
 
-        if (PlayerPrefs.HasKey("Current_Scene"))
+        /*if (PlayerPrefs.HasKey("Current_Scene"))
         {
             continueActive = true;
         }
         else
         {
             continueActive = false;
-        }
+        }*/
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(continueActive)
+        /*if(continueActive)
         {
             buttonContinue.interactable = true;
         }
         else
         {
             buttonContinue.interactable = false;
-        }
+        }*/
     }
 
     public void Continue()

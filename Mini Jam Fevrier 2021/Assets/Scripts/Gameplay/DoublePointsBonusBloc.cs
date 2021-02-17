@@ -2,19 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Entity : MonoBehaviour
+public class DoublePointsBonusBloc : MonoBehaviour
 {
-    public enum TypeObject
-    {
-        Default,
-        Player,
-        Bloc,
-        BallSaver
-    }
-
-    public TypeObject Type;
-
-
     // Start is called before the first frame update
     void Start()
     {
@@ -25,5 +14,10 @@ public class Entity : MonoBehaviour
     void Update()
     {
         
+    }
+
+    public void Effect()
+    {
+        GameCore.instance.scoreToAdd *= 2;
     }
 }
