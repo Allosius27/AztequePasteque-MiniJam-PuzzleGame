@@ -8749,6 +8749,20 @@ ScriptedImporter:
     spriteID: 2fb7ce89a1bf49a44ab38589bcf7855f
     layerID: 53
     mosaicPosition: {x: 4, y: 4}
+  - name: Perso_Parts_FeatherUp_L
+    spriteName: Perso_Parts_FeatherUp_L
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 9ef1b68f77cff6545aa808e168797ea5
+    layerID: 43
+    mosaicPosition: {x: 4, y: 1191}
+  - name: Perso_Parts_FeatherDown_L
+    spriteName: Perso_Parts_FeatherDown_L
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 31bd7a3df17c8e44682c966a31119063
+    layerID: 41
+    mosaicPosition: {x: 662, y: 4}
   - name: Perso_Parts_ArmUp_L
     spriteName: Perso_Parts_ArmUp_L
     isGroup: 0
@@ -8798,13 +8812,6 @@ ScriptedImporter:
     spriteID: 84df301c74a251a41b3f917b5cdacdc1
     layerID: 44
     mosaicPosition: {x: 4, y: 1460}
-  - name: Perso_Parts_FeatherUp_L
-    spriteName: Perso_Parts_FeatherUp_L
-    isGroup: 0
-    parentIndex: -1
-    spriteID: 9ef1b68f77cff6545aa808e168797ea5
-    layerID: 43
-    mosaicPosition: {x: 4, y: 1191}
   - name: Perso_Parts_FeatherDown_R
     spriteName: Perso_Parts_FeatherDown_R
     isGroup: 0
@@ -8812,13 +8819,6 @@ ScriptedImporter:
     spriteID: 5e59d32e93cf0b64c961ebc1cdaf9003
     layerID: 42
     mosaicPosition: {x: 322, y: 783}
-  - name: Perso_Parts_FeatherDown_L
-    spriteName: Perso_Parts_FeatherDown_L
-    isGroup: 0
-    parentIndex: -1
-    spriteID: 31bd7a3df17c8e44682c966a31119063
-    layerID: 41
-    mosaicPosition: {x: 662, y: 4}
   - name: Perso_Parts_ArmUp_R
     spriteName: Perso_Parts_ArmUp_R
     isGroup: 0
