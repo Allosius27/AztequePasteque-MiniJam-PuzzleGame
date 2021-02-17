@@ -52,9 +52,11 @@ public class GameCore : MonoBehaviour
     void Start()
     {
         SetStockBalls(0);
+
         SetScore(0);
+        
         SetTotalScore(0);
-        textTotalScore.text = totalScore.ToString();
+        
 
         currentLevel = levels[s_current_level];
         currentLevel.gameObject.SetActive(true);
@@ -91,6 +93,9 @@ public class GameCore : MonoBehaviour
 
     public void SetScore(int amount)
     {
+        textScore.text = score.ToString();
+        boardScore.textScoreAmount.text = score.ToString();
+
         if (value >= amount)
         {
             setScoreAmount = 0;
@@ -99,8 +104,7 @@ public class GameCore : MonoBehaviour
         }
 
         this.score += scoreAddingValue;
-        textScore.text = score.ToString();
-        boardScore.textScoreAmount.text = score.ToString();
+        
 
         value += scoreAddingValue;
 
@@ -110,6 +114,9 @@ public class GameCore : MonoBehaviour
     public void SetTotalScore(int actualtotalScore)
     {
 
+        textTotalScore.text = totalScore.ToString();
+        boardScore.textScoreTotalAmount.text = totalScore.ToString();
+
         if (totalScore >= (actualtotalScore + score))
         {
             setTotalScoreActive = false;
@@ -117,8 +124,7 @@ public class GameCore : MonoBehaviour
         }
 
         totalScore += scoreAddingValue;
-        textTotalScore.text = totalScore.ToString();
-        boardScore.textScoreTotalAmount.text = totalScore.ToString();
+       
 
         
     }
@@ -132,6 +138,8 @@ public class GameCore : MonoBehaviour
 
     public void ScoreObtainedAtLevel()
     {
+        scoreObtained.scoreObtainedText.text = scoreObtained.scoreobtainedAmount.ToString();
+
         if (scoreObtained.scoreobtainedAmount >= score)
         {
             StartCoroutine(ScoreObtainsAtLevelEndDisplay());
@@ -143,8 +151,8 @@ public class GameCore : MonoBehaviour
 
         scoreObtained.gameObject.SetActive(true);
         scoreObtained.scoreobtainedAmount += scoreAddingValue;
-        Debug.Log(scoreObtained.scoreobtainedAmount);
-        scoreObtained.scoreObtainedText.text = scoreObtained.scoreobtainedAmount.ToString();
+        //Debug.Log(scoreObtained.scoreobtainedAmount);
+        
 
         
     }
