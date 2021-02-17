@@ -57,4 +57,7 @@ MonoBehaviour:
   pointsNumbers: {fileID: 4669908962210019537, guid: 2a8fd6f6c174397499af3aedb533787f,
     type: 3}
   dynamics: {fileID: 0}
+  scoreObtained: {fileID: 0}
+  scoreObtainedActive: 0
+  scoreAddingValue: 100
   currentLevelIndex: 0

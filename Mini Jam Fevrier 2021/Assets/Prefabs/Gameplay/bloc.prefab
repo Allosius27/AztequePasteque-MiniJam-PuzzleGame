@@ -143,6 +143,7 @@ MonoBehaviour:
   a: 1
   isTouched: 0
   forceMult: 250
+  scoreValue: 100
 --- !u!50 &3664984087055536437
 Rigidbody2D:
   serializedVersion: 4

@@ -46,7 +46,7 @@ public class DeathZone : MonoBehaviour
             Debug.Log(this.name + "Collides");
 
             GameCore.instance.SetStockBalls(-1);
-            GameCore.instance.launcher.ballRelaunch = true;
+            
 
             CheckBlocsToDestroy();
             Destroy(hit.gameObject);
@@ -55,8 +55,14 @@ public class DeathZone : MonoBehaviour
 
             if (GameCore.instance.currentLevel.listTargetBlocs.Count == 0 && GameCore.s_current_level < GameCore.instance.levels.Length-1)
             {
-                Debug.Log("Next Level");
-                GameCore.instance.NextLevel();
+                Debug.Log("End Level");
+                GameCore.instance.scoreObtainedActive = true;
+                //GameCore.instance.ScoreObtainedAtLevel();
+                //GameCore.instance.NextLevel();
+            }
+            else
+            {
+                GameCore.instance.launcher.ballRelaunch = true;
             }
         }
     }
