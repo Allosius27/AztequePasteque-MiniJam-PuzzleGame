@@ -43,8 +43,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7ddf4c75119abb441921c9973b23688e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  textTotalScore: {fileID: 0}
   stockBalls: 10
   score: 0
+  value: 0
+  setScoreAmount: 0
   scoreToAdd: 0
   textStockBalls: {fileID: 0}
   textScore: {fileID: 0}
@@ -60,4 +63,6 @@ MonoBehaviour:
   scoreObtained: {fileID: 0}
   scoreObtainedActive: 0
   scoreAddingValue: 100
+  boardScore: {fileID: 0}
+  setTotalScoreActive: 0
   currentLevelIndex: 0

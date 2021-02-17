@@ -7,9 +7,12 @@ using UnityEngine.SceneManagement;
 public class GameCore : MonoBehaviour
 {
     public static int totalScore = 0;
+    public Text textTotalScore;
 
     public int stockBalls = 10;
     public int score = 0;
+    public int value;
+    public int setScoreAmount;
 
     public int scoreToAdd = 0;
 
@@ -30,6 +33,10 @@ public class GameCore : MonoBehaviour
     public bool scoreObtainedActive;
     public int scoreAddingValue = 100;
 
+    public BoardScore boardScore;
+    public bool setTotalScoreActive;
+    int actualTotalScore = 0;
+
     public int currentLevelIndex = 0;
     
 
@@ -46,6 +53,8 @@ public class GameCore : MonoBehaviour
     {
         SetStockBalls(0);
         SetScore(0);
+        SetTotalScore(0);
+        textTotalScore.text = totalScore.ToString();
 
         currentLevel = levels[s_current_level];
         currentLevel.gameObject.SetActive(true);
@@ -62,6 +71,16 @@ public class GameCore : MonoBehaviour
         {
             ScoreObtainedAtLevel();
         }
+
+        if (setScoreAmount > 0)
+        {
+            SetScore(setScoreAmount);
+        }
+
+        if (setTotalScoreActive)
+        {
+            SetTotalScore(actualTotalScore);
+        }
     }
 
     public void SetStockBalls(int amount)
@@ -72,8 +91,36 @@ public class GameCore : MonoBehaviour
 
     public void SetScore(int amount)
     {
-        this.score += amount;
+        if (value >= amount)
+        {
+            setScoreAmount = 0;
+            value = 0;
+            return;
+        }
+
+        this.score += scoreAddingValue;
         textScore.text = score.ToString();
+        boardScore.textScoreAmount.text = score.ToString();
+
+        value += scoreAddingValue;
+
+        
+    }
+
+    public void SetTotalScore(int actualtotalScore)
+    {
+
+        if (totalScore >= (actualtotalScore + score))
+        {
+            setTotalScoreActive = false;
+            return;
+        }
+
+        totalScore += scoreAddingValue;
+        textTotalScore.text = totalScore.ToString();
+        boardScore.textScoreTotalAmount.text = totalScore.ToString();
+
+        
     }
 
     public void DisplayPointsScore(Transform target, int amount)
@@ -85,17 +132,21 @@ public class GameCore : MonoBehaviour
 
     public void ScoreObtainedAtLevel()
     {
-        scoreObtained.gameObject.SetActive(true);
-        scoreObtained.scoreobtainedAmount += scoreAddingValue;
-        Debug.Log(scoreObtained.scoreobtainedAmount);
-        scoreObtained.scoreObtainedText.text = scoreObtained.scoreobtainedAmount.ToString();
-
         if (scoreObtained.scoreobtainedAmount >= score)
         {
             StartCoroutine(ScoreObtainsAtLevelEndDisplay());
 
             scoreObtainedActive = false;
+
+            return;
         }
+
+        scoreObtained.gameObject.SetActive(true);
+        scoreObtained.scoreobtainedAmount += scoreAddingValue;
+        Debug.Log(scoreObtained.scoreobtainedAmount);
+        scoreObtained.scoreObtainedText.text = scoreObtained.scoreobtainedAmount.ToString();
+
+        
     }
 
     IEnumerator ScoreObtainsAtLevelEndDisplay()
@@ -106,11 +157,16 @@ public class GameCore : MonoBehaviour
         scoreObtained.animatorScoreObtainsAmount.SetBool("TextLeave", true);
         yield return new WaitForSeconds(0.5f);
         scoreObtained.gameObject.SetActive(false);
+        BoardScore();
     }
 
     public void BoardScore()
     {
-        totalScore = score;
+        boardScore.gameObject.SetActive(true);
+
+        actualTotalScore = totalScore;
+
+        setTotalScoreActive = true;
     }
 
     public void NextLevel()

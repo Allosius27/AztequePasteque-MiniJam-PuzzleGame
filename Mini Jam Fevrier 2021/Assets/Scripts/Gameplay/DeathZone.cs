@@ -51,7 +51,9 @@ public class DeathZone : MonoBehaviour
             CheckBlocsToDestroy();
             Destroy(hit.gameObject);
 
-            GameCore.instance.SetScore(GameCore.instance.scoreToAdd);
+            GameCore.instance.setScoreAmount = GameCore.instance.scoreToAdd;
+            GameCore.instance.scoreToAdd = 0;
+            //GameCore.instance.SetScore(GameCore.instance.scoreToAdd);
 
             if (GameCore.instance.currentLevel.listTargetBlocs.Count == 0 && GameCore.s_current_level < GameCore.instance.levels.Length-1)
             {
