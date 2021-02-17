@@ -68,7 +68,6 @@ public class DeathZone : MonoBehaviour
             //Debug.Log(this.name + "Collides");
 
             GameCore.instance.SetStockBalls(modifierBall);
-            
 
             CheckBlocsToDestroy();
             Destroy(hit.gameObject);
