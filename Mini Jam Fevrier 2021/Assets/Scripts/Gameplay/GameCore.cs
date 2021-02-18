@@ -51,6 +51,9 @@ public class GameCore : MonoBehaviour
     public bool desactivateArrow = false;
 
     public GameObject gameOverPanel;
+
+    public GameObject losePoint;
+    public GameObject fxLose, fxExplosion, fxWin;
     
 
     public static GameCore instance;
@@ -85,6 +88,7 @@ public class GameCore : MonoBehaviour
         if(stockBalls == 0 && currentLevel.listTargetBlocs.Count > 0)
         {
             gameOverPanel.SetActive(true);
+            
         }
 
         /*if (comboNumber > 0)
@@ -201,6 +205,8 @@ public class GameCore : MonoBehaviour
     {
         boardScore.gameObject.SetActive(true);
 
+        AudioManager.instance.PlaySFX(8);
+
         actualTotalScore = totalScore;
 
         setTotalScoreActive = true;
@@ -211,6 +217,7 @@ public class GameCore : MonoBehaviour
         s_current_level++;
         totalScore = actualTotalScore + score;
         desactivateArrow = true;
+        AudioManager.instance.PlaySFX(7);
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         return;
     }
@@ -219,7 +226,7 @@ public class GameCore : MonoBehaviour
     {
         s_current_level = 0;
         totalScore = 0;
-
+        AudioManager.instance.PlaySFX(7);
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
@@ -227,7 +234,7 @@ public class GameCore : MonoBehaviour
     {
         s_current_level = 0;
         totalScore = 0;
-
+        AudioManager.instance.PlaySFX(7);
         SceneManager.LoadScene(mainMenuScene);
     }
 }

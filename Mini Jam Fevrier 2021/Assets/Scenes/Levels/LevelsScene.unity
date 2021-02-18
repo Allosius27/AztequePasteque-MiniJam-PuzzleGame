@@ -7503,6 +7503,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: DeathZone
       objectReference: {fileID: 0}
+    - target: {fileID: 3557507981015056178, guid: fd775a8eeea90f84e84ea9d97bb4b86e,
+        type: 3}
+      propertyPath: anim
+      value: 
+      objectReference: {fileID: 330300687}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fd775a8eeea90f84e84ea9d97bb4b86e, type: 3}
 --- !u!114 &597858147 stripped
@@ -12696,6 +12701,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: DeathZone
       objectReference: {fileID: 0}
+    - target: {fileID: 3557507981015056178, guid: fd775a8eeea90f84e84ea9d97bb4b86e,
+        type: 3}
+      propertyPath: anim
+      value: 
+      objectReference: {fileID: 330300687}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fd775a8eeea90f84e84ea9d97bb4b86e, type: 3}
 --- !u!114 &987739545 stripped
@@ -20059,7 +20069,7 @@ PrefabInstance:
     - target: {fileID: 8809511395082698227, guid: 4afc55b75a47f884081e169703863165,
         type: 3}
       propertyPath: m_RootOrder
-      value: 5
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 8809511395082698227, guid: 4afc55b75a47f884081e169703863165,
         type: 3}
@@ -28655,11 +28665,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1219083324111204745, guid: 39b479409389dbc4f847f325e658b865,
         type: 3}
-      propertyPath: levels.Array.size
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 1219083324111204745, guid: 39b479409389dbc4f847f325e658b865,
-        type: 3}
       propertyPath: textTotalScore
       value: 
       objectReference: {fileID: 115993020}
@@ -28695,6 +28700,11 @@ PrefabInstance:
       objectReference: {fileID: 786359212}
     - target: {fileID: 1219083324111204745, guid: 39b479409389dbc4f847f325e658b865,
         type: 3}
+      propertyPath: levels.Array.data[2]
+      value: 
+      objectReference: {fileID: 1470252558}
+    - target: {fileID: 1219083324111204745, guid: 39b479409389dbc4f847f325e658b865,
+        type: 3}
       propertyPath: launcher
       value: 
       objectReference: {fileID: 254449214}
@@ -28718,52 +28728,6 @@ PrefabInstance:
       propertyPath: gameOverPanel
       value: 
       objectReference: {fileID: 6282367201256735915}
-    - target: {fileID: 1219083324111204745, guid: 39b479409389dbc4f847f325e658b865,
-        type: 3}
-      propertyPath: textEffectTrapShoot
-      value: 
-      objectReference: {fileID: 1139824901554928316, guid: 5ac99f68d723fc949817b5881211229c,
-        type: 3}
-    - target: {fileID: 1219083324111204745, guid: 39b479409389dbc4f847f325e658b865,
-        type: 3}
-      propertyPath: levels.Array.data[2]
-      value: 
-      objectReference: {fileID: 1470252558}
-    - target: {fileID: 1219083324111204745, guid: 39b479409389dbc4f847f325e658b865,
-        type: 3}
-      propertyPath: levels.Array.data[3]
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 1219083324111204745, guid: 39b479409389dbc4f847f325e658b865,
-        type: 3}
-      propertyPath: levels.Array.data[4]
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 1219083324111204745, guid: 39b479409389dbc4f847f325e658b865,
-        type: 3}
-      propertyPath: levels.Array.data[5]
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 1219083324111204745, guid: 39b479409389dbc4f847f325e658b865,
-        type: 3}
-      propertyPath: levels.Array.data[6]
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 1219083324111204745, guid: 39b479409389dbc4f847f325e658b865,
-        type: 3}
-      propertyPath: levels.Array.data[7]
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 1219083324111204745, guid: 39b479409389dbc4f847f325e658b865,
-        type: 3}
-      propertyPath: levels.Array.data[8]
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 1219083324111204745, guid: 39b479409389dbc4f847f325e658b865,
-        type: 3}
-      propertyPath: levels.Array.data[9]
-      value: 
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 39b479409389dbc4f847f325e658b865, type: 3}
 --- !u!1001 &4521993589626258128
@@ -29214,6 +29178,18 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 6282367201256735914}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &6282367201256735919
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6282367201256735915}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 395e5d3f43e3324418738966e0a86157, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &7676914798070041887
 PrefabInstance:
   m_ObjectHideFlags: 0

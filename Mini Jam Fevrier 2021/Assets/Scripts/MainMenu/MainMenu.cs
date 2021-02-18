@@ -59,11 +59,13 @@ public class MainMenu : MonoBehaviour
 
     public void Continue()
     {
+
         SceneManager.LoadScene(loadGameScene);
     }
 
     public void NewGame()
     {
+        AudioManager.instance.PlaySFX(7);
         StartCoroutine(LoadAsynchronously(newGameScene));
 
     }
@@ -95,6 +97,7 @@ public class MainMenu : MonoBehaviour
 
     public void Exit()
     {
+        AudioManager.instance.PlaySFX(7);
         Application.Quit();
     }
 }

@@ -48,6 +48,8 @@ public class Bloc : MonoBehaviour
             collisionDir = collisionDir.normalized;
             hit.rigidbody.AddForce(collisionDir * forceMult);
 
+            AudioManager.instance.PlaySFX(1);
+
             if (!isTouched)
             {
                 int score = (int)(scoreValue * GameCore.instance.comboScoreMultiplier);
@@ -62,12 +64,14 @@ public class Bloc : MonoBehaviour
                     GameCore.instance.DisplayTextEffect(this.transform, GameCore.instance.textEffectDoublePoints);
                     //Debug.Log(GameCore.instance.scoreToAdd);
                     doublePointsBonusBloc.Effect();
+                    AudioManager.instance.PlaySFX(3);
                     //Debug.Log(GameCore.instance.scoreToAdd);
                 }
                 else if(this.isBonus && this.isTrapShootBonus && trapShootBonusBloc != null)
                 {
                     GameCore.instance.DisplayTextEffect(this.transform, GameCore.instance.textEffectTrapShoot);
                     trapShootBonusBloc.Effect();
+                    AudioManager.instance.PlaySFX(4);
                 }
                 GameCore.instance.scoreToAdd += score;
                 GameCore.instance.comboNumber += 1;

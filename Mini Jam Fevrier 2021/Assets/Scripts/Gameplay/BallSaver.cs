@@ -62,6 +62,7 @@ public class BallSaver : MonoBehaviour
 
             deathZone.CheckBlocsToDestroy();
             Destroy(hit.gameObject);
+            AudioManager.instance.PlaySFX(0);
 
             GameCore.instance.setScoreAmount = GameCore.instance.scoreToAdd;
             GameCore.instance.scoreToAdd = 0;

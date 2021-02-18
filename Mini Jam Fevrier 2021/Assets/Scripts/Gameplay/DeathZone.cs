@@ -41,12 +41,15 @@ public class DeathZone : MonoBehaviour
 
     public void CheckBlocsToDestroy()
     {
+        AudioManager.instance.PlaySFX(6);
+
         for(int i = 0; i < GameCore.instance.currentLevel.listBlocs.Count; i++)
         {
             if(GameCore.instance.currentLevel.listBlocs[i].isTouched && GameCore.instance.currentLevel.listBlocs[i] != null)
             {
                 Debug.Log(GameCore.instance.currentLevel.listBlocs[i].gameObject);
-                Destroy(GameCore.instance.currentLevel.listBlocs[i].gameObject);
+                Instantiate(GameCore.instance.fxExplosion, GameCore.instance.currentLevel.listBlocs[i].transform.position, transform.rotation);
+                Destroy(GameCore.instance.currentLevel.listBlocs[i].gameObject, 0.5f);
                 /*if(GameCore.instance.currentLevel.listTargetBlocs.Contains(GameCore.instance.currentLevel.listBlocs[i]))
                 {
                     GameCore.instance.currentLevel.listTargetBlocs.Remove(GameCore.instance.currentLevel.listBlocs[i]);

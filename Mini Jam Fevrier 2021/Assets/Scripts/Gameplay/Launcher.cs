@@ -41,6 +41,7 @@ public class Launcher : MonoBehaviour
 
     void fireBullet(Vector2 direction, float rotationZ)
     {
+        AudioManager.instance.PlaySFX(10);
         GameObject b = Instantiate(bulletPrefab) as GameObject;
         b.transform.position = bulletStart.transform.position;
         b.transform.rotation = Quaternion.Euler(0.0f, 0.0f, rotationZ);

@@ -27,7 +27,8 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 3204936102472104587}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -43,6 +44,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7ddf4c75119abb441921c9973b23688e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  comboScoreMultiplier: 1
+  comboNumber: 0
   textTotalScore: {fileID: 0}
   stockBalls: 10
   score: 0
@@ -56,6 +59,7 @@ MonoBehaviour:
   levels:
   - {fileID: 0}
   - {fileID: 0}
+  - {fileID: 0}
   launcher: {fileID: 0}
   pointsNumbers: {fileID: 4669908962210019537, guid: 2a8fd6f6c174397499af3aedb533787f,
     type: 3}
@@ -63,12 +67,51 @@ MonoBehaviour:
     type: 3}
   textEffectDoublePoints: {fileID: 2458237969860393240, guid: 913eb41e2457afe419b3e23bac1e554c,
     type: 3}
+  textEffectTrapShoot: {fileID: 1139824901554928316, guid: 5ac99f68d723fc949817b5881211229c,
+    type: 3}
   dynamics: {fileID: 0}
   scoreObtained: {fileID: 0}
   scoreObtainedActive: 0
   scoreAddingValue: 100
   boardScore: {fileID: 0}
   setTotalScoreActive: 0
+  actualTotalScore: 0
   currentLevelIndex: 0
   mainMenuScene: TitleScreen
+  desactivateArrow: 0
   gameOverPanel: {fileID: 0}
+  losePoint: {fileID: 1535082563749306680}
+  fxLose: {fileID: 6153879428297871282, guid: 70d860f71e5fab14d830bc5d5a07a0b3, type: 3}
+  fxExplosion: {fileID: 4630132198746638536, guid: dcc803440bf6072489c1b574aabaf394,
+    type: 3}
+  fxWin: {fileID: 2352158544341339539, guid: 1b96e8968df781d42a0ca7b39ef797e9, type: 3}
+--- !u!1 &1535082563749306680
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3204936102472104587}
+  m_Layer: 0
+  m_Name: LosePoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3204936102472104587
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1535082563749306680}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.15, y: 4.06, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1219083324111204744}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
