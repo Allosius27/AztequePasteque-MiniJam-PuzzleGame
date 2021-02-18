@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class BallSaver : MonoBehaviour
 {
+    public SpriteRenderer spriteRenderer;
     public Transform[] waypoints;
     private Transform target;
 
@@ -30,6 +31,7 @@ public class BallSaver : MonoBehaviour
         // Si l'ennemi est quasiment arrivé à sa destination
         if (Vector3.Distance(transform.position, target.position) < 0.3f)
         {
+            spriteRenderer.flipX = !spriteRenderer.flipX;
             destPoint = (destPoint + 1) % waypoints.Length;
             target = waypoints[destPoint];
 

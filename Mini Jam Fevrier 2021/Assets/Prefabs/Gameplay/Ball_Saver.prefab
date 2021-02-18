@@ -45,7 +45,6 @@ GameObject:
   - component: {fileID: 8976115664408901126}
   - component: {fileID: 8976115664408901127}
   - component: {fileID: 4578948294556271011}
-  - component: {fileID: 7454934421214800870}
   m_Layer: 0
   m_Name: Dynamic_object
   m_TagString: Untagged
@@ -143,9 +142,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a767e83966a3b9f4fb43c7a2a05efde4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  spriteRenderer: {fileID: 8976115664408901124}
   waypoints:
-  - {fileID: 8976115665475838633}
   - {fileID: 8976115664043463160}
+  - {fileID: 8976115665475838633}
   speed: 2
   modifierBall: 0
   deathZone: {fileID: 0}
@@ -205,21 +205,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &7454934421214800870
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8976115664408901129}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 75133cbc5be7d9742b982fcf620c9399, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  anim: {fileID: 0}
-  TargetA: {fileID: 8976115665475838634}
-  TargetB: {fileID: 8976115664043463161}
 --- !u!1 &8976115665286749629
 GameObject:
   m_ObjectHideFlags: 0

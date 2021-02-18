@@ -43,7 +43,7 @@ public class GameCore : MonoBehaviour
 
     public BoardScore boardScore;
     public bool setTotalScoreActive;
-    int actualTotalScore = 0;
+    public int actualTotalScore = 0;
 
     public int currentLevelIndex = 0;
     public string mainMenuScene;
@@ -151,7 +151,7 @@ public class GameCore : MonoBehaviour
 
     public void DisplayPointsScore(Transform target, int amount)
     {
-        PointsNumber display = Instantiate(pointsNumbers, target.transform.position, target.transform.rotation);
+        PointsNumber display = Instantiate(pointsNumbers, target.transform.position, transform.rotation);
         display.SetPoints(amount);
         display.gameObject.transform.SetParent(dynamics.transform);
     }
@@ -159,7 +159,7 @@ public class GameCore : MonoBehaviour
 
     public void DisplayTextEffect(Transform target, TextEffect textEffect)
     {
-        TextEffect display = Instantiate(textEffect, target.transform.position, target.transform.rotation);
+        TextEffect display = Instantiate(textEffect, target.transform.position, transform.rotation);
         display.SetPoints();
         display.gameObject.transform.SetParent(dynamics.transform);
     }
@@ -209,6 +209,7 @@ public class GameCore : MonoBehaviour
     public void NextLevel()
     {
         s_current_level++;
+        totalScore = actualTotalScore + score;
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         return;
     }
