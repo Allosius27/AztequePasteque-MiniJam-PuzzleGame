@@ -74,7 +74,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: b08fe0514b41b834ab06831af8629800, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 7a8565cbc31a5cf429f493f5a7822865, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -132,6 +132,9 @@ MonoBehaviour:
   b: 0
   a: 1
   isTouched: 0
+  isBonus: 0
+  isDoublePointsBonus: 0
+  isTrapShootBonus: 0
   forceMult: 250
   scoreValue: 100
 --- !u!50 &5699131463380216343

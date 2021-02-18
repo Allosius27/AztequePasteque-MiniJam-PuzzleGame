@@ -74,8 +74,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: b657fb96814d116479adc0929273b946, type: 3}
-  m_Color: {r: 1, g: 0.325142, b: 0, a: 1}
+  m_Sprite: {fileID: 21300000, guid: a271f1e41017a8249bfa7879a8b15873, type: 3}
+  m_Color: {r: 1, g: 0, b: 0.652894, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -98,18 +98,18 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.015854478, y: 0.029072583}
+  m_Offset: {x: -0.015854359, y: 0.0052450895}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 5.12, y: 5.12}
+    oldSize: {x: 4.8761907, y: 2.4380953}
     newSize: {x: 5.12, y: 5.12}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 4.9825935, y: 1.4681381}
+  m_Size: {x: 4.9825935, y: 2.5642006}
   m_EdgeRadius: 0
 --- !u!114 &4216979129990750740
 MonoBehaviour:
@@ -142,6 +142,9 @@ MonoBehaviour:
   b: 0.25
   a: 1
   isTouched: 0
+  isBonus: 0
+  isDoublePointsBonus: 0
+  isTrapShootBonus: 0
   forceMult: 250
   scoreValue: 1000
 --- !u!50 &701215612487960981
