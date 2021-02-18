@@ -3,7 +3,10 @@ guid: fe38cb12f8811944a9cc609a9c7c3976
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - anim: {instanceID: 0}
+  - puppet: {fileID: 2582125547429886801, guid: a221cd03d5d2fe046a9227cc4b4ed297,
+      type: 3}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

@@ -14,6 +14,7 @@ public class BallSaver : MonoBehaviour
     public int modifierBall = 0;
 
     public DeathZone deathZone;
+    ///public Animator anim;
 
 
     // Start is called before the first frame update
@@ -56,6 +57,8 @@ public class BallSaver : MonoBehaviour
 
             GameCore.instance.SetStockBalls(modifierBall);
 
+            
+
 
             deathZone.CheckBlocsToDestroy();
             Destroy(hit.gameObject);
@@ -65,6 +68,7 @@ public class BallSaver : MonoBehaviour
             //GameCore.instance.SetScore(GameCore.instance.scoreToAdd);
 
             deathZone.transition = true;
+            
 
             if (GameCore.instance.currentLevel.listTargetBlocs.Count == 0 && GameCore.s_current_level < GameCore.instance.levels.Length - 1 && deathZone.transition == true)
             {
@@ -76,6 +80,7 @@ public class BallSaver : MonoBehaviour
             else
             {
                 GameCore.instance.launcher.ballRelaunch = true;
+                ///anim.SetTrigger("AnimWin");
             }
         }
     }

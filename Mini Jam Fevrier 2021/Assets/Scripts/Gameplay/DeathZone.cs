@@ -8,10 +8,12 @@ public class DeathZone : MonoBehaviour
 
     public int modifierBall = -1;
 
+    public Animator anim;
+
     // Start is called before the first frame update
     void Start()
     {
-        
+    
     }
 
     // Update is called once per frame
@@ -60,6 +62,7 @@ public class DeathZone : MonoBehaviour
 
         if (typeCollision == null)
         {
+            
             return;
         }
 
@@ -71,6 +74,7 @@ public class DeathZone : MonoBehaviour
 
             CheckBlocsToDestroy();
             Destroy(hit.gameObject);
+            anim.SetTrigger("AnimLoose");
 
             GameCore.instance.setScoreAmount = GameCore.instance.scoreToAdd;
             GameCore.instance.scoreToAdd = 0;
