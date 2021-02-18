@@ -106,8 +106,6 @@ public class GameCore : MonoBehaviour
         {
             SetTotalScore(actualTotalScore);
         }
-
-
     }
 
     public void SetStockBalls(int amount)

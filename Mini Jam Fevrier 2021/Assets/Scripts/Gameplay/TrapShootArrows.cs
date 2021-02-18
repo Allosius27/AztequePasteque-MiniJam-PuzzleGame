@@ -13,6 +13,8 @@ public class TrapShootArrows : MonoBehaviour
     private Transform target;
 
     public bool isActive;
+    public int count;
+    public int countMax = 6;
     public float speed;
     private int destPoint;
     public DeathZone deathZone;
@@ -37,7 +39,7 @@ public class TrapShootArrows : MonoBehaviour
 
         }
 
-        if (isFiring == true && isActive)
+        if (isFiring == true && isActive && count < countMax)
         {
             StartCoroutine(Shoot());
             isFiring = false;
@@ -48,6 +50,7 @@ public class TrapShootArrows : MonoBehaviour
     {
         // shooting logic
         Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
+        count += 1;
         //AudioManager.instance.PlaySFX(4);
         yield return new WaitForSeconds(countdown);
         isFiring = true;
