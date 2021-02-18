@@ -218,6 +218,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   anim: {fileID: 0}
+  TargetA: {fileID: 8976115665475838634}
+  TargetB: {fileID: 8976115664043463161}
 --- !u!1 &8976115665286749629
 GameObject:
   m_ObjectHideFlags: 0
