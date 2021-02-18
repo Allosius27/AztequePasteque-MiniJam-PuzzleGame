@@ -5545,6 +5545,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: DeathZone
       objectReference: {fileID: 0}
+    - target: {fileID: 3557507981015056178, guid: fd775a8eeea90f84e84ea9d97bb4b86e,
+        type: 3}
+      propertyPath: anim
+      value: 
+      objectReference: {fileID: 330300687}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fd775a8eeea90f84e84ea9d97bb4b86e, type: 3}
 --- !u!114 &425669245 stripped
