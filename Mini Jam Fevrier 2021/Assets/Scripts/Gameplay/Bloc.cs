@@ -9,17 +9,20 @@ public class Bloc : MonoBehaviour
     public bool isTouched = false;
     public bool isBonus = false;
     public bool isDoublePointsBonus = false;
+    public bool isTrapShootBonus = false;
 
     public float forceMult = 100.0f;
     public int scoreValue = 10;
     private Vector3 collisionDir = Vector3.zero;
 
     DoublePointsBonusBloc doublePointsBonusBloc;
+    TrapShootBonusBloc trapShootBonusBloc;
 
     // Start is called before the first frame update
     void Start()
     {
         doublePointsBonusBloc = GetComponent<DoublePointsBonusBloc>();
+        trapShootBonusBloc = GetComponent<TrapShootBonusBloc>();
     }
 
     // Update is called once per frame
@@ -47,19 +50,27 @@ public class Bloc : MonoBehaviour
 
             if (!isTouched)
             {
+                int score = (int)(scoreValue * GameCore.instance.comboScoreMultiplier);
+
                 graphics.color = new Color(r, g, b, a);
                 if (this.isBonus == false)
                 {
-                    GameCore.instance.DisplayPointsScore(this.transform, scoreValue);
+                    GameCore.instance.DisplayPointsScore(this.transform, score);
                 }
                 else if(this.isBonus && this.isDoublePointsBonus && doublePointsBonusBloc != null)
                 {
-                    GameCore.instance.DisplayTextEffectBallSaver(this.transform, GameCore.instance.textEffectDoublePoints);
+                    GameCore.instance.DisplayTextEffect(this.transform, GameCore.instance.textEffectDoublePoints);
                     //Debug.Log(GameCore.instance.scoreToAdd);
                     doublePointsBonusBloc.Effect();
                     //Debug.Log(GameCore.instance.scoreToAdd);
                 }
-                GameCore.instance.scoreToAdd += scoreValue;
+                else if(this.isBonus && this.isTrapShootBonus && trapShootBonusBloc != null)
+                {
+                    GameCore.instance.DisplayTextEffect(this.transform, GameCore.instance.textEffectTrapShoot);
+                    trapShootBonusBloc.Effect();
+                }
+                GameCore.instance.scoreToAdd += score;
+                GameCore.instance.comboNumber += 1;
                 isTouched = true;
             }
         }

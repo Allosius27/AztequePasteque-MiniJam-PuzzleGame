@@ -50,7 +50,7 @@ public class BallSaver : MonoBehaviour
         {
             //Debug.Log(this.name + "Collides");
 
-            GameCore.instance.DisplayTextEffectBallSaver(this.transform, GameCore.instance.textEffectBallSaver);
+            GameCore.instance.DisplayTextEffect(this.transform, GameCore.instance.textEffectBallSaver);
 
             GameCore.instance.SetStockBalls(modifierBall);
 

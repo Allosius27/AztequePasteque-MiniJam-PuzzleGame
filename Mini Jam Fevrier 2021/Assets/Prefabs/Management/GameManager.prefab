@@ -66,7 +66,7 @@ MonoBehaviour:
   dynamics: {fileID: 0}
   scoreObtained: {fileID: 0}
   scoreObtainedActive: 0
-  scoreAddingValue: 10
+  scoreAddingValue: 100
   boardScore: {fileID: 0}
   setTotalScoreActive: 0
   currentLevelIndex: 0

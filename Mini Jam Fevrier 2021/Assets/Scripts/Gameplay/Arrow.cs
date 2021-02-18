@@ -2,24 +2,15 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Entity : MonoBehaviour
+public class Arrow : MonoBehaviour
 {
-    public enum TypeObject
-    {
-        Default,
-        Player,
-        Bloc,
-        BallSaver,
-        Arrow
-    }
-
-    public TypeObject Type;
-
+    public float speed = 50f;
+    public Rigidbody2D rb;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        rb.velocity = transform.right * speed;
     }
 
     // Update is called once per frame

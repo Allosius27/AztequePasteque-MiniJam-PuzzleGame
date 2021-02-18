@@ -6,6 +6,9 @@ using UnityEngine.SceneManagement;
 
 public class GameCore : MonoBehaviour
 {
+    public float comboScoreMultiplier = 1.0f;
+    public int comboNumber = 0;
+
     public static int totalScore = 0;
     public Text textTotalScore;
 
@@ -29,6 +32,7 @@ public class GameCore : MonoBehaviour
 
     public TextEffect textEffectBallSaver;
     public TextEffect textEffectDoublePoints;
+    public TextEffect textEffectTrapShoot;
 
     //public Canvas uiCanvas;
     public GameObject dynamics;
@@ -81,6 +85,11 @@ public class GameCore : MonoBehaviour
             gameOverPanel.SetActive(true);
         }
 
+        if (comboNumber > 0)
+        {
+            comboScoreMultiplier = 1.0f + (comboNumber / 10.0f);
+        }
+
         if(scoreObtainedActive)
         {
             ScoreObtainedAtLevel();
@@ -95,6 +104,8 @@ public class GameCore : MonoBehaviour
         {
             SetTotalScore(actualTotalScore);
         }
+
+
     }
 
     public void SetStockBalls(int amount)
@@ -136,9 +147,6 @@ public class GameCore : MonoBehaviour
         }
 
         totalScore += scoreAddingValue;
-       
-
-        
     }
 
     public void DisplayPointsScore(Transform target, int amount)
@@ -149,7 +157,7 @@ public class GameCore : MonoBehaviour
     }
 
 
-    public void DisplayTextEffectBallSaver(Transform target, TextEffect textEffect)
+    public void DisplayTextEffect(Transform target, TextEffect textEffect)
     {
         TextEffect display = Instantiate(textEffect, target.transform.position, target.transform.rotation);
         display.SetPoints();

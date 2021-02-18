@@ -2,19 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Entity : MonoBehaviour
+public class TrapShootBonusBloc : MonoBehaviour
 {
-    public enum TypeObject
-    {
-        Default,
-        Player,
-        Bloc,
-        BallSaver,
-        Arrow
-    }
-
-    public TypeObject Type;
-
+    public bool isActive;
 
     // Start is called before the first frame update
     void Start()
@@ -26,5 +16,10 @@ public class Entity : MonoBehaviour
     void Update()
     {
         
+    }
+
+    public void Effect()
+    {
+        isActive = true;
     }
 }

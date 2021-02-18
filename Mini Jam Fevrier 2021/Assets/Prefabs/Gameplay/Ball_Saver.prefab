@@ -143,7 +143,7 @@ MonoBehaviour:
   waypoints:
   - {fileID: 8976115665475838633}
   - {fileID: 8976115664043463160}
-  speed: 5
+  speed: 2
   modifierBall: 0
   deathZone: {fileID: 0}
 --- !u!50 &8976115664408901126
