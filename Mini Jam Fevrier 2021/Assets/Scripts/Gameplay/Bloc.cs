@@ -15,8 +15,8 @@ public class Bloc : MonoBehaviour
     public int scoreValue = 10;
     private Vector3 collisionDir = Vector3.zero;
 
-    DoublePointsBonusBloc doublePointsBonusBloc;
-    TrapShootBonusBloc trapShootBonusBloc;
+    public DoublePointsBonusBloc doublePointsBonusBloc;
+    public TrapShootBonusBloc trapShootBonusBloc;
 
     // Start is called before the first frame update
     void Start()

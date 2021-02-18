@@ -48,6 +48,8 @@ public class GameCore : MonoBehaviour
     public int currentLevelIndex = 0;
     public string mainMenuScene;
 
+    public bool desactivateArrow = false;
+
     public GameObject gameOverPanel;
     
 
@@ -85,10 +87,10 @@ public class GameCore : MonoBehaviour
             gameOverPanel.SetActive(true);
         }
 
-        if (comboNumber > 0)
+        /*if (comboNumber > 0)
         {
             comboScoreMultiplier = 1.0f + (comboNumber / 10.0f);
-        }
+        }*/
 
         if(scoreObtainedActive)
         {
@@ -210,6 +212,7 @@ public class GameCore : MonoBehaviour
     {
         s_current_level++;
         totalScore = actualTotalScore + score;
+        desactivateArrow = true;
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         return;
     }

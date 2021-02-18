@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class TrapShootBonusBloc : MonoBehaviour
 {
-    public bool isActive;
+    public TrapShootArrows trapShootArrows;
 
     // Start is called before the first frame update
     void Start()
@@ -20,6 +20,6 @@ public class TrapShootBonusBloc : MonoBehaviour
 
     public void Effect()
     {
-        isActive = true;
+        trapShootArrows.isActive = true;
     }
 }

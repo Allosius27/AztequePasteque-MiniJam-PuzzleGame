@@ -218,12 +218,13 @@ MonoBehaviour:
   bulletPrefab: {fileID: 6260387981343238372, guid: 915da37cfcc5fa945b8db6688dfd7282,
     type: 3}
   isFiring: 1
-  countdown: 0.5
+  countdown: 0.8
   waypoints:
   - {fileID: 4589388783082623162}
   - {fileID: 2500258125341749224}
+  isActive: 0
   speed: 2
-  trapShootBonusBloc: {fileID: 0}
+  deathZone: {fileID: 0}
 --- !u!114 &2520706821835628859
 MonoBehaviour:
   m_ObjectHideFlags: 0

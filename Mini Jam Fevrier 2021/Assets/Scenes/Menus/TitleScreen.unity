@@ -888,7 +888,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a10561e65cc110498806f99a3135448, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  newGameScene: Sandbox
+  newGameScene: LevelsScene
   loadingScreen: {fileID: 439444263}
   slider: {fileID: 227061610}
   progressText: {fileID: 367948881}

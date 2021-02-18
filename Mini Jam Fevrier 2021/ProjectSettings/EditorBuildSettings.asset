@@ -9,9 +9,6 @@ EditorBuildSettings:
     path: Assets/Scenes/Menus/TitleScreen.unity
     guid: f76bfd68ca2ce5f428bb4edbd2a256fe
   - enabled: 1
-    path: Assets/Scenes/Levels/Sandbox.unity
-    guid: 6bc4e0e61e66f284cb53bf425408f238
-  - enabled: 1
     path: Assets/Scenes/Levels/LevelsScene.unity
     guid: ead8de6a21490604cb31e07cf369776a
   m_configObjects: {}

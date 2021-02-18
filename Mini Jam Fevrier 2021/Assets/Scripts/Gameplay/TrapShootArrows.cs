@@ -12,10 +12,10 @@ public class TrapShootArrows : MonoBehaviour
     public Transform[] waypoints;
     private Transform target;
 
+    public bool isActive;
     public float speed;
     private int destPoint;
-
-    public TrapShootBonusBloc trapShootBonusBloc;
+    public DeathZone deathZone;
 
     // Start is called before the first frame update
     void Start()
@@ -37,7 +37,7 @@ public class TrapShootArrows : MonoBehaviour
 
         }
 
-        if (isFiring == true && trapShootBonusBloc.isActive)
+        if (isFiring == true && isActive)
         {
             StartCoroutine(Shoot());
             isFiring = false;
