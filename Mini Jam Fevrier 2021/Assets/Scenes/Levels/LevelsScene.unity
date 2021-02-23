@@ -2227,6 +2227,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Trap_Arrow_bloc_ball
       objectReference: {fileID: 0}
+    - target: {fileID: 8366985597865062972, guid: 38e01f82ed7edd14ba76ecbfa143102c,
+        type: 3}
+      propertyPath: trapShootArrows
+      value: 
+      objectReference: {fileID: 1195457710}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 38e01f82ed7edd14ba76ecbfa143102c, type: 3}
 --- !u!1001 &179743177
@@ -12129,7 +12134,7 @@ PrefabInstance:
         type: 3}
       propertyPath: deathZone
       value: 
-      objectReference: {fileID: 425669245}
+      objectReference: {fileID: 597858147}
     - target: {fileID: 8809511395082698227, guid: 4afc55b75a47f884081e169703863165,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -12193,6 +12198,18 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 949495713}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &949495715 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7331106733289608063, guid: 4afc55b75a47f884081e169703863165,
+    type: 3}
+  m_PrefabInstance: {fileID: 949495713}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 625437bfa7342ab478d88b6808fb0e5c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &953028096
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -15752,7 +15769,7 @@ PrefabInstance:
         type: 3}
       propertyPath: deathZone
       value: 
-      objectReference: {fileID: 425669245}
+      objectReference: {fileID: 987739545}
     - target: {fileID: 8809511395082698227, guid: 4afc55b75a47f884081e169703863165,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -15816,6 +15833,18 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1195457708}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1195457710 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7331106733289608063, guid: 4afc55b75a47f884081e169703863165,
+    type: 3}
+  m_PrefabInstance: {fileID: 1195457708}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 625437bfa7342ab478d88b6808fb0e5c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1213322075
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -27531,6 +27560,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Trap_Arrow_bloc_ball
       objectReference: {fileID: 0}
+    - target: {fileID: 8366985597865062972, guid: 38e01f82ed7edd14ba76ecbfa143102c,
+        type: 3}
+      propertyPath: trapShootArrows
+      value: 
+      objectReference: {fileID: 949495715}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 38e01f82ed7edd14ba76ecbfa143102c, type: 3}
 --- !u!1001 &2104215831
